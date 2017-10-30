@@ -15,7 +15,8 @@ Game.Preloader.prototype = {
 
     // Maptiles.
     this.load.tilemap('map','assets/level1.csv');
-    this.load.image('tileset','assets/tileset.png');
+    // this.load.image('tileset','assets/tileset.png');
+    this.load.image('tileset','assets/tilea4.png');
 
     // Player sprite.
     this.load.spritesheet('player','assets/player.png',24,26);
