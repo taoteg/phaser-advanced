@@ -11,7 +11,8 @@ Game.Preloader.prototype = {
     this.time.advancedTiming = true;
     this.load.setPreloadSprite(this.preloaderBar);
     // LOAD ALL ASSETS.
-
+    this.load.tilemap('map','assets/level1.csv');
+    this.load.image('tileset','assets/tileset.png');
   },
   create:function() {
     this.state.start('Level1');
