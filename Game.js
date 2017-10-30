@@ -1,4 +1,4 @@
-console.log('Game.js');
+// console.log('Game.js');
 
 window.onload = function() {
   console.log('START::window.onload()');

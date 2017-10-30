@@ -1,4 +1,4 @@
-console.log('Level1.js');
+// console.log('Level1.js');
 
 Game.Level1 = function(game) {};
 
@@ -16,6 +16,8 @@ var controls = {};
 var playerConfig = {};
 playerConfig.speed = 150;
 playerConfig.jumpTimer = 0;
+
+var button;
 
 Game.Level1.prototype = {
   create:function() {
@@ -44,6 +46,11 @@ Game.Level1.prototype = {
       up: this.input.keyboard.addKey(Phaser.Keyboard.W),
     };
 
+    button = this.add.button(this.world.centerX - 95, this.world.centerY + 200, 'buttons', function(){
+      console.log('pressed button');
+    }, this, 2, 1, 0);
+
+    button.fixedToCamera = true;
   },
   update:function() {
     this.physics.arcade.collide(player,layer);

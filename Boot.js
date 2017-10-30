@@ -1,4 +1,4 @@
-console.log('Boot.js');
+// console.log('Boot.js');
 
 var Game = {};
 

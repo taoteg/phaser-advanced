@@ -1,4 +1,4 @@
-console.log('Preloader.js');
+// console.log('Preloader.js');
 
 Game.Preloader = function(game) {
   this.preloadBar = null;
@@ -19,6 +19,9 @@ Game.Preloader.prototype = {
 
     // Player sprite.
     this.load.spritesheet('player','assets/player.png',24,26);
+
+    // Buttons.
+    this.load.spritesheet('buttons','assets/button_sprite_sheet.png',193,71)
   },
   create:function() {
     this.state.start('Level1');
