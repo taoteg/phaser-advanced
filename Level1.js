@@ -50,10 +50,6 @@ Game.Level1.prototype = {
 
     player.body.velocity.x = 0;
 
-    if (controls.up.isDown) {
-      player.animations.play('jump');
-    }
-
     if (controls.right.isDown) {
       player.animations.play('run');
       player.scale.setTo(1,1);
@@ -69,6 +65,11 @@ Game.Level1.prototype = {
     if (controls.up.isDown && (player.body.onFloor() || player.body.touching.down) && this.time.now > playerConfig.jumpTimer) {
       player.body.velocity.y = -600;
       playerConfig.jumpTimer = this.time.now + 750;
+      player.animations.play('jump');
+    }
+
+    if (player.body.velocity.x == 0 && player.body.velocity.y == 0) {
+      player.animations.play('idle');
     }
   },
 }
